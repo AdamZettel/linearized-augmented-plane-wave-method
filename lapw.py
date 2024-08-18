@@ -1,6 +1,6 @@
 import scipy
 import numpy as np
-import excor 
+import excor
 import matplotlib.pyplot as plt
 from functools import cmp_to_key
 
@@ -169,7 +169,6 @@ def NumerovGen(F, U, dx, f0=0.0, f1=1e-3):
 
     return Solution
 
-import numpy as np
 
 def CRHS(E, l, R, Veff):
     """
@@ -192,7 +191,6 @@ def CRHS(E, l, R, Veff):
     
     return RHS
 
-import numpy as np
 
 def SolvePoisson(Zq, R, rho):
     """
@@ -356,7 +354,6 @@ def FindCoreStates(core, R, Veff, Z, fraction=5.):
     
     return (coreRho[::-1], coreE, coreZ, states)
 
-import numpy as np
 import scipy.special
 from scipy.linalg import eigh
 
@@ -474,7 +471,6 @@ def ComputeEigensystem(k, Km, Olap_I, Enu, logDer, RMuffinTin, Vol, VKSi=0):
 
     return Ek, Ar, w0, w1, w2, wi
 
-import numpy as np
 from scipy.special import expit  # Logistic sigmoid function
 
 def rootChemicalPotential(mu, Ek, wkp, Zval, beta=50.):
@@ -499,8 +495,6 @@ def rootChemicalPotential(mu, Ek, wkp, Zval, beta=50.):
     Zt = np.sum(wkp[:, np.newaxis] * ferm)
     
     return 2 * Zt - Zval
-
-import numpy as np
 
 def ferm(x):
     """Compute the Fermi-Dirac distribution."""
@@ -558,8 +552,6 @@ def ComputeInterstitialCharge(mu, Ek, wi, wkp, beta=50.):
 
     return sIntRho
 
-import numpy as np
-import scipy.integrate
 from scipy.interpolate import interp1d
 
 def Atom_cmpb(x, y):
@@ -629,11 +621,7 @@ def Atom_ChargeDensity(states, R, Veff, Z):
     return rho, Ebs
 
 
-import numpy as np
-import scipy.integrate
 from scipy.interpolate import interp1d
-#import excor  # Make sure to import your ExchangeCorrelation class
-#from your_module import FindCoreStates, SolvePoisson, rs  # Adjust imports as necessary
 
 def Atom_charge(Z, core, mix=0.3, RmaxAtom=10.0, Natom=3001, precision=1.0, Nitt=100): #originally precision is 1e-5, I changed it to 10 eV for testing purposes
     """
@@ -726,13 +714,6 @@ RED = '\033[31;1m'
 GREEN = '\033[32;1m'
 BLUE = '\033[34;1m'
 YELLOW = '\033[33;1m'
-
-import numpy as np
-import scipy.integrate
-import scipy.interpolate
-import scipy.optimize
-import matplotlib.pyplot as plt
-#import excor  # Ensure you have this module for exchange-correlation
 
 def Atom_cmpb(x, y):
     """Comparison function for sorting bound states."""
