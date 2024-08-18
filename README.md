@@ -9,6 +9,6 @@ cd linearized-augmented-plane-wave-method
 python3 lapw.py
 ```
 ## Band Structure
-After running the code you should see a band structure that looks something like this. This band structure is not correct because the convergence criteria for the energy is set at 1 eV. The original setting was 1e-5, but in order to get the code to run quickly I increased the tolerance.
+After running the code you should see a band structure that looks something like this. This band structure is not correct because the convergence criteria for the energy is set at 1 eV. The original setting was 1e-5, but in order to get the code to run quickly I increased the tolerance. <br>
 ![](incorrect_copper_band_struct.png)
 
